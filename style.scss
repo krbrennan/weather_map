@@ -23,4 +23,35 @@ body{
 
 .container {
   background: white;
+
+  .weather {
+    padding: 2em;
+
+    .city-name {
+
+      #city-name {
+        
+      }
+    }
+
+    .weather-info {
+      padding: 1em;
+    }
+
+    #temp {
+      font-size: 1.25em;
+      padding-left: 1.5em;
+    }
+
+    #main {
+      padding-left: 1.5em;
+
+    }
+
+    #forecast {
+      padding-left: 1.5em;
+
+
+    }
+  }
 }

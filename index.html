@@ -9,27 +9,34 @@
 
     <div class="searchBox">
       <form id="searchInput" for='inputBox' action="index.html" method="post">
-        <label for="inputBox">enter zipcode:</label>
-        <input id="inputBox" type="input" name="" value="">
+        <!-- <label for="inputBox">Enter Zipcode or City:</label> -->
+        <input id="inputBox" type="input" name="" value="" placeholder="Enter Zipcode or City:">
         <input type="submit" name="submit" value="Submit">
       </form>
+      <div class="geo-locate">
+        <button type="button" id='geo-locate-btn' name="button">Current Location</button>
+      </div>
     </div>
 
     <div class="container">
       <div class="weather">
-        <h4>Current Temperature:
+        <div class="city-name">Weather in:
+          <span id='city-name'></span>
+        </div>
+        <div class='weather-info'>Current Temperature:
           <span id='temp'></span>
-        </h4>
-        <h4>Currently the Weather is
+        </div>
+        <div class='weather-info'>Current Weather:
           <span id='main'></span>
-        </h4>
-        <h4>Daily Forecast:
+        </div>
+        <div class='weather-info'>Daily Forecast:
           <span id='forecast'></span>
-        </h4>
+        </div>
       </div>
       <div class="radar"></div>
     </div>
 
+    <script type="text/javascript" src="./node_modules/geolocator/dist/geolocator.min.js"></script>
     <script type="text/javascript" src='./script.js'></script>
 
   </body>
