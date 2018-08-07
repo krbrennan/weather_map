@@ -40,8 +40,9 @@ async function getWeatherCity(e){
   return results(await response.json())
 }
 
-async function getWeatherCoords(e){
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${e}&APPID=ac628c4c599f5392d529f22369c7f85f&units=imperial`)
+async function getWeatherCoords(lat,long){
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=ac628c4c599f5392d529f22369c7f85f&units=imperial`)
+  return results(await response.json())
 }
 
 function capitalize(data){
