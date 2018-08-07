@@ -2,9 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./output.css">
     <title>Weather App</title>
   </head>
   <body>
+
+    <div class="searchBox">
+      <form id="searchInput" for='inputBox' action="index.html" method="post">
+        <label for="inputBox">enter zipcode:</label>
+        <input id="inputBox" type="input" name="" value="">
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="weather">
+        <h4>Current Temperature:
+          <span id='temp'></span>
+        </h4>
+        <h4>Currently the Weather is
+          <span id='main'></span>
+        </h4>
+        <h4>Daily Forecast:
+          <span id='forecast'></span>
+        </h4>
+      </div>
+      <div class="radar"></div>
+    </div>
 
     <script type="text/javascript" src='./script.js'></script>
 

@@ -1,0 +1,25 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background: wheat;
+  width: 90%;
+}
+
+.searchBox {
+  display: flex;
+}
+.searchBox #inputBox {
+  width: 20em;
+  text-align: center;
+  padding: 1.5em;
+  margin: 0 auto;
+}
+
+.container {
+  background: white;
+}
+
+/*# sourceMappingURL=output.css.map */
