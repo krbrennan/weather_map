@@ -1,60 +1,104 @@
 * {
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  background: wheat; }
+  background: wheat;
+}
+
+nav .mr-auto {
+  display: flex;
+  flex-direction: row;
+}
 
 .searchBox {
   display: flex;
-  flex-direction: column; }
-  .searchBox #inputBox {
-    width: 20em;
-    text-align: center;
-    padding: 1.5em;
-    margin: 0 auto; }
-
+  flex-direction: column;
+}
+.searchBox #inputBox {
+  width: 20em;
+  text-align: center;
+  padding: 1.5em;
+  margin: 0 auto;
+}
 .container {
   background: white;
   display: flex;
-  flex-direction: column; }
-  .container .city-name {
-    visibility: hidden;
-    display: inline-block; }
-    .container .city-name #city-name {
-      display: inline-block;
-      width: 100%;
-      line-height: 50px;
-      font-size: 4em;
-      align-items: center;
-      padding: 0.5em; }
-  .container .weather {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: row; }
-    .container .weather .weather-info {
-      padding: 1em;
-      display: flex; }
-      .container .weather .weather-info #temp-icon {
-        width: 8em;
-        height: 8em;
-        visibility: hidden; }
-      .container .weather .weather-info #temp {
-        min-height: 100px;
-        font-size: 5em;
-        display: inline-flex;
-        align-items: center; }
-    .container .weather .high-low #high {
-      padding: .5em; }
-    .container .weather .high-low #low {
-      padding: .5em; }
-    .container .weather .high-low .humidity #humidity {
-      display: flex;
-      margin-top: 1.5em;
-      justify-content: center; }
-  .container #main {
-    padding-left: 1.5em; }
-  .container #forecast {
-    padding-left: 1.5em; }
+  flex-direction: column;
+}
+.container .city-name {
+  visibility: hidden;
+  display: inline-block;
+  margin: 0 0;
+}
+.container .city-name #city-name {
+  display: inline-block;
+  width: 100%;
+  line-height: 50px;
+  font-size: 4em;
+  align-items: center;
+  padding: 0.5em;
+}
+.container .weather-cards {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.container .weather-cards .current-weather {
+  border: 1px solid black;
+  width: 25%;
+}
+.container .weather-cards .current-weather .weather-info {
+  padding: 0.25em;
+  display: flex;
+}
+.container .weather-cards .current-weather .weather-info #temp-icon {
+  width: 50%;
+  height: 50%;
+  visibility: hidden;
+}
+.container .weather-cards .current-weather .weather-info #temp {
+  min-height: 100px;
+  font-size: 4em;
+  display: inline-flex;
+  align-items: center;
+}
+.container .weather-cards .high-low #high {
+  padding: 0.5em;
+}
+.container .weather-cards .high-low #low {
+  padding: 0.5em;
+}
+.container .weather-cards .high-low .humidity #humidity {
+  display: flex;
+  margin-top: 1.5em;
+  justify-content: center;
+}
+.container .weather-cards .today-weather {
+  border: 1px solid black;
+  width: 25%;
+}
+.container .weather-cards .today-weather .weather-info #today-temp-icon {
+  width: 50%;
+  height: 50%;
+  visibility: hidden;
+}
+.container .weather-cards .tonight-weather {
+  border: 1px solid black;
+  width: 25%;
+}
+.container .weather-cards .tomorrow-weather {
+  border: 1px solid black;
+  width: 25%;
+}
+.container #main {
+  padding-left: 1.5em;
+}
+.container #forecast {
+  padding-left: 1.5em;
+}
 
 /*# sourceMappingURL=output.css.map */

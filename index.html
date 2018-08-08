@@ -9,10 +9,37 @@
   <body>
 
     <nav class='navbar navbar-light bg-dark'>
-      <button class='navbar-toggler' type="button" name="button" data-toggle='collapse' data-target='#navbar'>
+      <ul class='nav'>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Today</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Radar</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">5-day</a>
+        </li>
+      </ul>
+<!-- dropdown content -->
+      <button class='navbar-toggler' type="button" name="button" data-toggle='collapse' data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class='navbar-toggler-icon'></span>
       </button>
-
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+  </div>
     </nav>
 
     <div class="searchBox">
@@ -31,18 +58,68 @@
         <span id='city-name'></span>
       </div>
 
-      <div class="weather">
-        <div class='weather-info'>
-          <img id='temp-icon' src=''>
-          <span id='temp'></span>
-        </div>
-        <div class="high-low">
-          <span id='high'></span>
-          <span id='low'></span>
-          <div class="humidity">
-            <span id='humidity'></span>
+      <div class="weather-cards d-flex flex-row">
+
+        <div class="current-weather p-2">
+          <h2>Currently</h2>
+          <div class='weather-info'>
+            <img id='temp-icon' src=''>
+            <span id='temp'></span>
+          </div>
+          <div class="high-low">
+            <span id='high'></span>
+            <span id='low'></span>
+            <div class="humidity">
+              <span id='humidity'></span>
+            </div>
           </div>
         </div>
+
+        <div class="today-weather p-2">
+          <h2>Today</h2>
+          <div class='weather-info'>
+            <img id='today-temp-icon' src=''>
+            <span id='today-temp'></span>
+          </div>
+          <div class="today-high-low">
+            <span id='today-high'></span>
+            <span id='today-low'></span>
+            <div class="today-humidity">
+              <span id='today-humidity'></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tonight-weather p-2">
+          <h2>Tonight</h2>
+          <div class='weather-info'>
+            <img id='tonight-temp-icon' src=''>
+            <span id='tonight-temp'></span>
+          </div>
+          <div class="tonight-high-low">
+            <span id='tonight-high'></span>
+            <span id='tonight-low'></span>
+            <div class="humidity">
+              <span id='humidity'></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tomorrow-weather">
+          <h2>Tomorrow</h2>
+          <div class='weather-info'>
+            <img id='tomorrow-temp-icon' src=''>
+            <span id='tomorrow-temp'></span>
+          </div>
+          <div class="tomorrow-high-low">
+            <span id='tomorrow-high'></span>
+            <span id='tomorrow-low'></span>
+            <div class="humidity">
+              <span id='humidity'></span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class='weather-info'>Current Weather:
