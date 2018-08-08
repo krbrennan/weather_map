@@ -5,7 +5,7 @@
 
 body{
   // background: #74b9ff;
-  background: wheat;
+  background: #b2bec3;
 }
 
 
@@ -26,6 +26,7 @@ nav {
 .searchBox{
   display: flex;
   flex-direction: column;
+  padding-top: 2em;
 
   #inputBox {
     width: 20em;
@@ -34,17 +35,19 @@ nav {
     margin: 0 auto;
   }
 
-  .geo-locate {
-
+  .button {
+    margin-top: 1em;
   }
 
 }
 
 
 .container {
-  background: white;
+  background: #b2bec3;
   display: flex;
   flex-direction: column;
+  max-width: 90%;
+  padding: 0;
 
   .city-name {
     visibility: hidden;
@@ -70,29 +73,12 @@ nav {
       border: 1px solid black;
       width: 25%;
 
-      .weather-info {
-        padding: .25em;
-        display: flex;
-
-        #temp-icon {
-          width: 50%;
-          height: 50%;
-          visibility: hidden;
-        }
-        #temp {
-          min-height: 100px;
-          font-size: 4em;
-          display: inline-flex;
-          align-items: center;
-        }
-      }
     }
-
+}
 
     .high-low {
 
       #high {
-        // border-right: 2px solid black;
         padding: .5em;
       }
       #low {
@@ -114,37 +100,75 @@ nav {
       border: 1px solid black;
       width: 25%;
 
-      .weather-info {
 
-        #today-temp-icon {
-          width: 50%;
-          height: 50%;
-          visibility: hidden;
-        }
-      }
     }
 
     .tonight-weather {
       border: 1px solid black;
       width: 25%;
+
+
+
     }
 
     .tomorrow-weather {
       border: 1px solid black;
       width: 25%;
+
     }
 
+
+
 // end of weather-cards
+  .time-text {
+    text-align: center;
+  }
+  .temp-icon {
+    width: 6em;
+    height: 6em;
+    visibility: hidden;
+  }
+  .weather-info {
+    padding: .25em;
+    display: flex;
+    flex-direction: column;
   }
 
-  #main {
-    padding-left: 1.5em;
-
+  .temp {
+    font-size: 3em;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    padding-top: .5em;
   }
 
-  #forecast {
-    padding-left: 1.5em;
+  .high-low {
+    text-align: center;
+    line-height: 50%;
+  }
 
+  .card {
+    min-height: 300px;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
 
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    .temp {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .time-text {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .time-text {
+    font-size: 1em;
   }
 }

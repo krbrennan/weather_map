@@ -49,7 +49,7 @@
         <!-- <input type="submit" name="submit" value="Submit"> -->
       </form>
       <div class="geo-locate">
-        <button class='btn btn-primary' type="button" id='geo-locate-btn' name="button">Current Location</button>
+        <button class='btn btn-primary button' type="button" id='geo-locate-btn' name="button">Current Location</button>
       </div>
     </div>
 
@@ -60,60 +60,57 @@
 
       <div class="weather-cards d-flex flex-row">
 
-        <div class="current-weather p-2">
-          <h2>Currently</h2>
+        <div class="current-weather card p-2">
+          <h2 class='time-text'>Currently</h2>
           <div class='weather-info'>
-            <img id='temp-icon' src=''>
-            <span id='temp'></span>
+            <img class='temp-icon' id='temp-icon' src=''>
+            <span class='temp' id='temp'></span>
           </div>
           <div class="high-low">
-            <span id='high'></span>
-            <span id='low'></span>
             <div class="humidity">
               <span id='humidity'></span>
             </div>
           </div>
         </div>
 
-        <div class="today-weather p-2">
-          <h2>Today</h2>
+        <div class="today-weather card p-2">
+          <h2 class='time-text'>Today</h2>
           <div class='weather-info'>
-            <img id='today-temp-icon' src=''>
+            <img class='temp-icon' id='today-temp-icon' src=''>
             <span id='today-temp'></span>
           </div>
-          <div class="today-high-low">
-            <span id='today-high'></span>
-            <span id='today-low'></span>
+          <div class="high-low">
+            <span class='temp' id='today-high'></span>
+            <span class='temp' id='today-low'></span>
             <div class="today-humidity">
               <span id='today-humidity'></span>
             </div>
           </div>
         </div>
 
-        <div class="tonight-weather p-2">
-          <h2>Tonight</h2>
+        <div class="tonight-weather card p-2">
+          <h2 class='time-text'>Tonight</h2>
           <div class='weather-info'>
-            <img id='tonight-temp-icon' src=''>
-            <span id='tonight-temp'></span>
+            <img class='temp-icon' id='tonight-temp-icon' src=''>
+            <span class='temp' id='tonight-temp'></span>
           </div>
-          <div class="tonight-high-low">
-            <span id='tonight-high'></span>
-            <span id='tonight-low'></span>
+          <div class="high-low">
+            <span class='temp' id='tonight-low'></span>
             <div class="humidity">
               <span id='humidity'></span>
             </div>
           </div>
         </div>
 
-        <div class="tomorrow-weather">
-          <h2>Tomorrow</h2>
+        <div class="tomorrow-weather card">
+          <h2 class='time-text'>Tomorrow</h2>
           <div class='weather-info'>
-            <img id='tomorrow-temp-icon' src=''>
-            <span id='tomorrow-temp'></span>
+            <img class='temp-icon' id='tomorrow-temp-icon' src=''>
+            <span class='temp' id='tomorrow-temp'></span>
           </div>
-          <div class="tomorrow-high-low">
-            <span id='tomorrow-high'></span>
-            <span id='tomorrow-low'></span>
+          <div class="high-low">
+            <span class='temp' id='tomorrow-high'></span>
+            <span class='temp' id='tomorrow-low'></span>
             <div class="humidity">
               <span id='humidity'></span>
             </div>

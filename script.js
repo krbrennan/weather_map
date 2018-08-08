@@ -109,13 +109,13 @@ function forecastResults(data){
   tonightLow.innerHTML = Math.floor(data.list[2].main.temp_min)+ "˚"
 
 // Tomorrow
-  let temperatureIcon = data.list[0].weather[0].icon
-  todayTempIcon.src = `http://openweathermap.org/img/w/${temperatureIcon}.png`
-  todayTempIcon.style.visibility = 'visible'
+  let tomorrowTemperatureIcon = data.list[3].weather[0].icon
+  tomorrowTempIcon.src = `http://openweathermap.org/img/w/${tomorrowTemperatureIcon}.png`
+  tomorrowTempIcon.style.visibility = 'visible'
 
-  todayHigh.innerHTML = Math.floor(data.list[0].main.temp_max) + "˚"
-  todayHigh.style = 'border-right: 2px solid black;'
-  todayLow.innerHTML = Math.floor(data.list[0].main.temp_min)+ "˚"
+  tomorrowHigh.innerHTML = Math.floor(data.list[3].main.temp_max) + "˚"
+  tomorrowHigh.style = 'border-right: 2px solid black;'
+  tomorrowLow.innerHTML = Math.floor(data.list[3].main.temp_min)+ "˚"
 }
 
 function results(data){
@@ -133,7 +133,7 @@ function results(data){
 
   humidity.innerHTML = data.main.humidity + "%" + "Humidity"
 
-  temp.innerHTML = Math.floor(data.main.temp)
+  temp.innerHTML = Math.floor(data.main.temp) + "˚"
   main.innerHTML = data.weather[0].main
   forecast.innerHTML = capitalize(data.weather[0].description)
 }
