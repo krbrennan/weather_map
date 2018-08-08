@@ -2,40 +2,62 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./output.css">
     <title>Weather App</title>
   </head>
   <body>
 
+    <nav class='navbar navbar-light bg-dark'>
+      <button class='navbar-toggler' type="button" name="button" data-toggle='collapse' data-target='#navbar'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+
+    </nav>
+
     <div class="searchBox">
       <form id="searchInput" for='inputBox' action="index.html" method="post">
         <!-- <label for="inputBox">Enter Zipcode or City:</label> -->
         <input id="inputBox" type="input" name="" value="" placeholder="Enter Zipcode or City:">
-        <input type="submit" name="submit" value="Submit">
+        <!-- <input type="submit" name="submit" value="Submit"> -->
       </form>
       <div class="geo-locate">
-        <button type="button" id='geo-locate-btn' name="button">Current Location</button>
+        <button class='btn btn-primary' type="button" id='geo-locate-btn' name="button">Current Location</button>
       </div>
     </div>
 
     <div class="container">
+      <div class="city-name">Weather in:
+        <span id='city-name'></span>
+      </div>
+
       <div class="weather">
-        <div class="city-name">Weather in:
-          <span id='city-name'></span>
-        </div>
-        <div class='weather-info'>Current Temperature:
+        <div class='weather-info'>
+          <img id='temp-icon' src=''>
           <span id='temp'></span>
         </div>
-        <div class='weather-info'>Current Weather:
-          <span id='main'></span>
+        <div class="high-low">
+          <span id='high'></span>
+          <span id='low'></span>
+          <div class="humidity">
+            <span id='humidity'></span>
+          </div>
         </div>
-        <div class='weather-info'>Daily Forecast:
-          <span id='forecast'></span>
-        </div>
+      </div>
+
+      <div class='weather-info'>Current Weather:
+        <span id='main'></span>
+      </div>
+      <div class='weather-info'>Daily Forecast:
+        <span id='forecast'></span>
       </div>
       <div class="radar"></div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./node_modules/geolocator/dist/geolocator.min.js"></script>
     <script type="text/javascript" src='./script.js'></script>
 
