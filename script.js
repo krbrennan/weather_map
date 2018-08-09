@@ -27,12 +27,14 @@ const tonightTempIcon = document.getElementById('tonight-temp-icon')
 const tonightHighLow = document.getElementById('tonight-high-low')
 const tonightHigh = document.getElementById('tonight-high')
 const tonightLow = document.getElementById('tonight-low')
+const tonightForecast = document.getElementById('tonightForecast')
 
 const tomorrowTemp = document.getElementById('tomorrow-temp')
 const tomorrowTempIcon = document.getElementById('tomorrow-temp-icon')
 const tomorrowHighLow = document.getElementById('tomorrow-high-low')
 const tomorrowHigh = document.getElementById('tomorrow-high')
 const tomorrowLow = document.getElementById('tomorrow-low')
+const tomorrowForecast = document.getElementById('tomorrow-forecast')
 
 
 
@@ -107,6 +109,7 @@ function forecastResults(data){
   tonightTempIcon.style.visibility = 'visible'
 
   tonightLow.innerHTML = Math.floor(data.list[2].main.temp_min)+ "˚"
+  tonightForecast.innerHTML = data.list[2].weather[0].main
 
 // Tomorrow
   let tomorrowTemperatureIcon = data.list[3].weather[0].icon
@@ -116,6 +119,8 @@ function forecastResults(data){
   tomorrowHigh.innerHTML = Math.floor(data.list[3].main.temp_max) + "˚"
   tomorrowHigh.style = 'border-right: 2px solid black;'
   tomorrowLow.innerHTML = Math.floor(data.list[3].main.temp_min)+ "˚"
+
+  tomorrowForecast.innerHTML = data.list[3].weather[0].main
 }
 
 function results(data){
@@ -127,16 +132,27 @@ function results(data){
   tempIcon.src = `http://openweathermap.org/img/w/${temperatureIcon}.png`
   tempIcon.style.visibility = 'visible'
 
-  // high.innerHTML = Math.floor(data.main.temp_max) + "˚"
-  // high.style = 'border-right: 2px solid black;'
-  // low.innerHTML = Math.floor(data.main.temp_min)+ "˚"
-
-  humidity.innerHTML = data.main.humidity + "%" + "Humidity"
-
   temp.innerHTML = Math.floor(data.main.temp) + "˚"
   main.innerHTML = data.weather[0].main
   forecast.innerHTML = capitalize(data.weather[0].description)
 }
+
+//
+//
+// Radar
+//
+//
+// key= 3f1b4a4efc252d22
+// wundergroundHTTP =
+// http://api.wunderground.com/api/60b615a8f6991a57/radar/image.gif?maxlat=42.35&maxlon=-109.311&minlat=39.27&minlon=-114.644&width=600&height=480&newmaps=1
+
+async function getRadar(lat,long){
+  const response = await fetch(`http://api.wunderground.com/api/3f1b4a4efc252d22/radar/image.gif?centerlat=${lat}&centerlon=${long}&radius=100&width=280&height=280&newmaps=1`)
+  return handleRadar(await response.json())
+}
+
+
+
 
 //
 //
@@ -150,5 +166,6 @@ function getCoords(){
     let long = position.coords.longitude;
     getWeatherCoords(lat,long);
     getForecastCoords(lat,long);
+    getRadar(lat,long);
   });
 }

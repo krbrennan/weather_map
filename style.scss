@@ -1,6 +1,7 @@
 * {
   margin: 0 auto;
   padding: 0;
+  font-family: Spectral;
 }
 
 body{
@@ -13,7 +14,6 @@ body{
 //   flex-wrap: nowrap;
 // }
 nav {
-
 
   .mr-auto {
     display: flex;
@@ -54,6 +54,7 @@ nav {
     display: inline-block;
     margin: 0 0;
     #city-name {
+      text-shadow: #FFF 1px 0 10px;
       display: inline-block;
       width: 100%;
       line-height: 50px;
@@ -139,12 +140,11 @@ nav {
     display: inline-flex;
     align-items: center;
     text-align: center;
-    padding-top: .5em;
+    padding: 0 6px;
   }
 
   .high-low {
     text-align: center;
-    line-height: 50%;
   }
 
   .card {
@@ -154,12 +154,13 @@ nav {
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 960px) {
   .container {
     .temp {
       font-size: 30px;
     }
   }
+
 }
 
 @media only screen and (max-width: 735px) {
@@ -167,6 +168,13 @@ nav {
     font-size: 1.5em;
   }
 }
+
+@media only screen and (max-width: 631px) {
+  .temp {
+    border-right: 0px solid black !important;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .time-text {
     font-size: 1em;
