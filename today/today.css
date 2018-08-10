@@ -20,6 +20,15 @@ body {
   margin-top: 1em;
 }
 
+#loader{
+  visibility: hidden;
+  background: blue;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  margin-top: .5em;
+}
+
 .hourly {
   padding-top: 1em;
   margin: 0 auto;
