@@ -35,26 +35,44 @@ function handleHourly(data) {
     if(count >= 12){return}
     console.log(hour)
 
+// elements to create
     div = document.createElement('div')
     el = document.createElement('li')
     time = document.createElement('p')
     temp = document.createElement('p')
     realFeel = document.createElement('p')
 
+    outlook = document.createElement('p')
+    precipProbability = document.createElement('p')
+    outlookDiv = document.createElement('div')
+
+// element classes
     el.className = 'hourly-li'
     div.className = 'temp-div'
     time.className = 'time'
     temp.className = 'temp'
     realFeel.className = 'realFeel'
 
-    time.innerHTML = (currHour % 12) + ":" + "00"
-    temp.innerHTML = "Currently:  " + Math.floor(hour.temperature) + "˚"
-    realFeel.innerHTML = "Real Feel:  " + Math.ceil(hour.apparentTemperature) + "˚"
+    outlook.className = 'outlook'
+    precipProbability.className = 'precipProbability'
 
+
+// rendering content
+    time.innerHTML = (currHour % 12) + ":" + "00"
+    temp.innerHTML = "Temp:  " + Math.floor(hour.temperature) + "˚"
+    realFeel.innerHTML = "Real Feel:  " + Math.ceil(hour.apparentTemperature) + "˚"
+    outlook.innerHTML = "Outlook:  " + hour.summary
+    precipProbability.innerHTML = hour.precipProbability + "%" + "  Chance of Precipitation"
+
+// appending elements
     el.appendChild(time)
     div.appendChild(temp)
     div.appendChild(realFeel)
     el.appendChild(div)
+
+    outlookDiv.appendChild(outlook)
+    outlookDiv.appendChild(precipProbability)
+    el.appendChild(outlookDiv)
 
     hourlyUl.style.visibility = 'visible'
 
