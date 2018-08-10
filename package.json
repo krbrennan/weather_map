@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/krbrennan/weather_map#readme",
   "dependencies": {
-    "geolocator": "^2.1.3"
+    "geolocator": "^2.1.3",
+    "skycons": "^1.0.0"
   }
 }

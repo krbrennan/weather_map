@@ -11,19 +11,28 @@
     <nav class='navbar navbar-light bg-dark'>
       <ul class='nav'>
         <li class="nav-item">
-          <a href="./index.html" class="nav-link active">Currently</a>
+          <a href="../index.html" class="nav-link active">Currently</a>
         </li>
         <li class="nav-item">
           <a href="./today.html" class="nav-link active">Today</a>
-        </li>
-        <li class="nav-item">
-          <a href="./radar.html" class="nav-link active">Radar</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link active">5-day</a>
         </li>
       </ul>
     </nav>
+
+    <div class="searchBox">
+      <div class="geo-locate">
+        <button class='btn btn-primary button' type="button" id='geo-locate-btn' name="button">Get Local Forecast</button>
+      </div>
+    </div>
+
+    <div class="hourly">
+      <ul class='hourlyUl' id='hourlyUl'>
+
+      </ul>
+    </div>
 
 
     <script type="text/javascript" src='./todayScript.js'>

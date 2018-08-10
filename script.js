@@ -142,10 +142,6 @@ function results(data){
 // Radar
 //
 //
-// key= 3f1b4a4efc252d22
-// wundergroundHTTP =
-// http://api.wunderground.com/api/60b615a8f6991a57/radar/image.gif?maxlat=42.35&maxlon=-109.311&minlat=39.27&minlon=-114.644&width=600&height=480&newmaps=1
-
 async function getRadar(lat,long){
   const response = await fetch(`http://api.wunderground.com/api/3f1b4a4efc252d22/radar/image.gif?centerlat=${lat}&centerlon=${long}&radius=100&width=280&height=280&newmaps=1`)
   return handleRadar(await response.json())

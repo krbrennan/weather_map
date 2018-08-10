@@ -6,3 +6,47 @@
 body {
 
 }
+
+#geo-locate-btn {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.hourly {
+  padding-top: 1em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hourlyUl {
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 2px;
+  list-style: none;
+  display: inline-flex;
+  padding: .5em;
+  border: .5px solid black;
+  text-align: center;
+  visibility: hidden;
+  flex-direction: column;
+  width: 80%;
+}
+
+.hourlyUl li {
+  border: .5px solid black;
+  border-radius: 2px;
+  padding: .5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hourly-li {
+  flex-direction: row;
+}
+
+.time {
+  font-size: 3em;
+  justify-content: flex-start;
+}
