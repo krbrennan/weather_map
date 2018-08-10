@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fiveDay.css">
+    <title>Weather</title>
+  </head>
+  <body>
+
+    <nav class='navbar navbar-light bg-dark'>
+      <ul class='nav'>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link active">Outlook</a>
+        </li>
+        <li class="nav-item">
+          <a href="../today/today.html" class="nav-link active">Hourly</a>
+        </li>
+        <li class="nav-item">
+          <a href="./fiveDay.html" class="nav-link active">5-day</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="searchBox">
+      <form id="searchInput" for='inputBox' action="index.html" method="post">
+        <!-- <label for="inputBox">Enter Zipcode or City:</label> -->
+        <input id="inputBox" type="input" name="" value="" placeholder="Enter Zipcode or City:">
+        <!-- <input type="submit" name="submit" value="Submit"> -->
+      </form>
+      <div class="geo-locate">
+        <button class='btn btn-success button' type="button" id='geo-locate-btn' name="button">Current Location</button>
+      </div>
+    </div>
+
+    <div id='container' class="container">
+
+    </div>
+
+    <script type="text/javascript" src='./fiveDay.js'></script>
+  </body>
+</html>

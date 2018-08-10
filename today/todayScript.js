@@ -62,7 +62,7 @@ function handleHourly(data) {
     temp.innerHTML = "Temp:  " + Math.floor(hour.temperature) + "˚"
     realFeel.innerHTML = "Real Feel:  " + Math.ceil(hour.apparentTemperature) + "˚"
     outlook.innerHTML = "Outlook:  " + hour.summary
-    precipProbability.innerHTML = hour.precipProbability + "%" + "  Chance of Precipitation"
+    precipProbability.innerHTML = (hour.precipProbability * 100) + "%" + "  Chance of Precipitation"
 
 // appending elements
     el.appendChild(time)

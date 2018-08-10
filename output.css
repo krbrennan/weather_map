@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #74b9ff;
+  background: radial-gradient(closest-side, #74b9ff, #a29bfe);
 }
 
 nav .mr-auto {
@@ -29,7 +29,6 @@ nav .mr-auto {
 }
 
 .container {
-  background: #74b9ff;
   display: flex;
   flex-direction: column;
   max-width: 90%;

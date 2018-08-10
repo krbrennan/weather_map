@@ -1,0 +1,41 @@
+.nav {
+  min-width: 100%;
+  justify-content: center;
+}
+
+body {
+  background: radial-gradient(closest-side, #74b9ff, #a29bfe);
+  font-family: Spectral;
+  height: 100vh;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  justify-content: center;
+
+}
+
+#searchInput {
+  margin: 0 auto;
+}
+
+.geo-locate {
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+#inputBox {
+  width: 20em;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.button {
+  margin-top: 1em;
+  margin: 0 auto;
+}
+
+.container {
+}

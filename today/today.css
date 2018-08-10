@@ -4,7 +4,8 @@
 }
 
 body {
-  background: #74b9ff;
+  background: radial-gradient(closest-side, #74b9ff, #a29bfe);
+  height: 100vh;
 }
 
 .geo-locate {

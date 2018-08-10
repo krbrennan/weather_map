@@ -56,12 +56,6 @@ function handleForm(e) {
   getForecast(e)
 }
 
-// async function getWeatherZip(e){
-//   const zip = Number(e)
-//   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&APPID=ac628c4c599f5392d529f22369c7f85f&units=imperial`)
-//   return results(await response.json())
-// }
-
 async function getWeather(e){
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e},us&APPID=ac628c4c599f5392d529f22369c7f85f&units=imperial`)
   return results(await response.json())
@@ -143,12 +137,10 @@ function results(data){
 //
 //
 async function getRadar(lat,long){
-  const response = await fetch(`http://api.wunderground.com/api/3f1b4a4efc252d22/radar/image.gif?centerlat=${lat}&centerlon=${long}&radius=100&width=280&height=280&newmaps=1`)
+  const proxy = `https://thingproxy.freeboard.io/fetch/`
+  const response = await fetch(proxy + `http://api.wunderground.com/api/3f1b4a4efc252d22/radar/image.gif?centerlat=${lat}&centerlon=${long}&radius=100&width=280&height=280&newmaps=1`)
   return handleRadar(await response.json())
 }
-
-
-
 
 //
 //
